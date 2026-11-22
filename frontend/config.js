@@ -10,7 +10,7 @@
       if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
         return 'http://localhost:4000';
       }
-      return 'https://edu-compass-yia4.vercel.app';
+      return 'https://edu-compass-2o2k.vercel.app';
     }
   };
 })();
