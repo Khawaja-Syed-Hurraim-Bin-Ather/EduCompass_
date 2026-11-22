@@ -296,7 +296,7 @@ async function callGeminiAPI(prompt: string, modelName: string): Promise<LLMResp
   for (const activeModel of candidateModels) {
     try {
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${activeModel}:generateContent?key=${apiKey}`;
-      const res = await fetch(endpoint, {
+      const res: any = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -356,7 +356,7 @@ async function callXAIAPI(prompt: string): Promise<LLMResponse> {
     temperature: 0.2,
   };
 
-  const res = await fetch(endpoint, {
+  const res: any = await fetch(endpoint, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -405,7 +405,7 @@ export async function getEmbedding(text: string): Promise<number[] | null> {
     const apiKey = process.env.GEMINI_API_KEY;
     const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${LLM_CONFIG.embeddingModel}:embedContent?key=${apiKey}`;
 
-    const res = await fetch(endpoint, {
+    const res: any = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
