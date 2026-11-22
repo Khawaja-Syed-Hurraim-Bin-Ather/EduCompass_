@@ -46,16 +46,25 @@ app.use((0, cookie_parser_1.default)());
 app.use(security_1.requestSanitizer);
 // 5. Security event logger — no secrets ever logged (Rule #11)
 app.use(security_1.securityLogger);
-// ── Root & Health checks (not rate-limited) ─────────────────────────────
-app.get('/', (_req, res) => {
-    res.json({
-        status: 'ok',
-        service: 'educompass-api',
-        version: '1.0.0',
-        message: 'EduCompass CISE Backend API is running.',
-        health: '/health',
-    });
-});
+// ── Serve frontend static files from public/ ─────────────────────────────
+function getPublicDir() {
+    const candidates = [
+        path_1.default.join(__dirname, '../public'),
+        path_1.default.join(process.cwd(), 'public'),
+        path_1.default.join(process.cwd(), 'apps/api/public'),
+        path_1.default.resolve(__dirname, '../../public'),
+    ];
+    for (const c of candidates) {
+        if (fs_1.default.existsSync(c))
+            return c;
+    }
+    return path_1.default.join(__dirname, '../public');
+}
+const publicDir = getPublicDir();
+if (fs_1.default.existsSync(publicDir)) {
+    app.use(express_1.default.static(publicDir, { index: 'index.html' }));
+}
+// ── Health check (not rate-limited) ──────────────────────────────────────
 app.get('/health', (_req, res) => {
     res.json({
         status: 'ok',
@@ -107,11 +116,18 @@ app.use('/api/v1/professors', security_1.readLimiter, professors_1.professorsRou
 app.use('/api/v1/planner', security_1.readLimiter, planner_1.plannerRouter);
 app.use('/api/v1/batches', security_1.readLimiter, batches_1.batchesRouter);
 app.use('/api/v1/curriculum', security_1.readLimiter, curriculum_1.curriculumRouter);
-// ── 404 handler ──────────────────────────────────────────────────────────
-app.use((_req, res) => {
-    res.status(404).json({
-        error: { code: 'NOT_FOUND', message: 'Route not found' },
-    });
+// ── SPA fallback — serve index.html for all non-API routes ───────────────
+app.use((req, res, next) => {
+    if (req.path.startsWith('/api/') || req.path === '/health')
+        return next();
+    const dir = getPublicDir();
+    const indexFile = path_1.default.join(dir, 'index.html');
+    if (fs_1.default.existsSync(indexFile)) {
+        res.sendFile(indexFile);
+    }
+    else {
+        res.status(404).json({ error: { code: 'NOT_FOUND', message: 'Route not found' } });
+    }
 });
 // ── F6: Centralised error sanitizer — strips stack traces in prod ─────────
 app.use(security_1.errorSanitizer);

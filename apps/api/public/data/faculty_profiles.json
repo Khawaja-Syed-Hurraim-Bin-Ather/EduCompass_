@@ -1,0 +1,785 @@
+{
+  "professors": [
+    {
+      "id": "3492d20b-761e-4f55-bbea-9eac466bd653",
+      "university_id": null,
+      "name": "Dr. Muhammad Ali",
+      "department": "Computer Science & Information Technology",
+      "research_areas": [
+        "Artificial Intelligence",
+        "Natural Language Processing",
+        "Computer Vision"
+      ],
+      "publications": [],
+      "contact_route": "mailto:mali@neduet.edu.pk",
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'ali':3 'artifici':8 'comput':4,13 'dr':1 'inform':6 'intellig':9 'languag':11 'muhammad':2 'natur':10 'process':12 'scienc':5 'technolog':7 'vision':14",
+      "created_at": "2026-10-25T13:21:17.813461+00:00",
+      "title": null,
+      "slug": null,
+      "rank": null,
+      "qualification": null,
+      "highlights": null,
+      "selected_publications": [],
+      "research_areas_source": null,
+      "domain_tags": [],
+      "area_tags": [],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "ab3ea43c-1645-4ef9-9ddb-f4aee69296ea",
+      "university_id": null,
+      "name": "Dr. Fatima Zahra",
+      "department": "Software Engineering",
+      "research_areas": [
+        "Software Architecture",
+        "Cloud Computing",
+        "DevOps"
+      ],
+      "publications": [],
+      "contact_route": "mailto:fzahra@neduet.edu.pk",
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'architectur':7 'cloud':8 'comput':9 'devop':10 'dr':1 'engin':5 'fatima':2 'softwar':4,6 'zahra':3",
+      "created_at": "2026-10-25T13:21:17.813461+00:00",
+      "title": null,
+      "slug": null,
+      "rank": null,
+      "qualification": null,
+      "highlights": null,
+      "selected_publications": [],
+      "research_areas_source": null,
+      "domain_tags": [],
+      "area_tags": [],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "a750a830-faaa-4940-b65c-8d8b26d65c5a",
+      "university_id": null,
+      "name": "Dr. Syed Zaffar Qasim",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Evolutionary computation and multiobjective optimization",
+        "Machine learning and deep learning",
+        "Blockchain technology",
+        "Computer security"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'-2022':55 '1991':35 '2000':41 '2007':29 '2020':54 '2021':27 'ai':72 'ai-ml':71 'algorithm':52 'analysi':64 'approv':44 'architectur':31 'b.e':34 'blockchain':19,74 'comput':5,10,21,30,36 'cybersecur':75 'deep':17 'design':33 'docea/d':49 'dr':1 'emot':61 'engin':8 'evolutionari':9 'fmpso':48 'hec':43 'hec-approv':42 'inform':6 'injuri':69 'iot':68 'learn':15,18 'm.engg':28 'machin':14 'ml':73 'mosa/d':50 'multiobject':12,24 'ned':26,39 'optim':13,25,76 'phd':23,45 'postgradu':57 'prevent':70 'project':58 'publish':47 'qasim':4 'recognit':62 'rode':51 'secur':22 'sentiment':63 'sinc':40 'speech':60 'supervis':56 'supervisor':46 'sy':2 'system':7,32,37 'technolog':20 'wearabl':67 'wearable-iot':66 'zaffar':3",
+      "created_at": "2026-10-26T12:26:07.962538+00:00",
+      "title": "Dr.",
+      "slug": "syed-zaffar-qasim",
+      "rank": null,
+      "qualification": "PhD Multiobjective Optimization, NED (2021); M.Engg 2007 (Computer Architecture & System Design); B.E. 1991 (Computer Systems); at NED since 2000.",
+      "highlights": "HEC-approved PhD supervisor; published FMPSO, DOCEA/D, MOSA/D, RODE algorithms in 2020-2022; supervises postgraduate projects on speech emotion recognition, sentiment analysis and wearable-IoT injury prevention.",
+      "selected_publications": [
+        "FMPSO: fuzzy-dominance based many-objective particle swarm optimization, Evolutionary Intelligence (2022)",
+        "RODE: Ranking-dominance-based algorithm for many-objective optimization, Arabian Journal for Science and Engineering (2020)"
+      ],
+      "research_areas_source": "stated",
+      "domain_tags": [
+        "ai-ml",
+        "blockchain",
+        "cybersecurity"
+      ],
+      "area_tags": [
+        "optimization"
+      ],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "ab27f9ba-ff96-4829-8b47-b7508ce02508",
+      "university_id": null,
+      "name": "Ms. Tahreem",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Remote sensing and land-cover change detection",
+        "AI assistive devices",
+        "Computer networks and security"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'-8':54 '2018':33 '2021':27 '8':57 'ai':15,72,79 'ai-ml':78 'analys':56 'assist':16,37 'b.e':29,68 'chang':13,48 'citi':39 'classif':46 'comput':3,18,23,30 'cover':12 'cybersecur':82 'data':65 'detect':14,49 'devic':17,73 'engin':6,32 'former':35 'green':63 'green-spac':62 'hear':76 'imageri':55 'impair':77 'inform':4 'karachi':67 'lab':40 'land':11 'land-cov':10 'landsat':53 'm.e':22,42 'ml':80 'ms':1 'ncai':41 'ndvi':51 'ned':34 'network':19,24,81 'project':69 'remot':7,84 'remote-sens':83 'research':36 'secur':21,26 'sens':8,85 'smart':38 'space':64 'system':5,25,31 'tahreem':2 'thesi':43 'urban':60 'veget':45 'year':58",
+      "created_at": "2026-10-26T12:26:08.215486+00:00",
+      "title": "Ms.",
+      "slug": "tahreem",
+      "rank": "Lecturer",
+      "qualification": "M.E. Computer Networks & Systems Security (2021) and B.E. Computer Systems Engineering (2018), NED; former research assistant, Smart City Lab, NCAI.",
+      "highlights": "M.E. thesis on vegetation classification and change detection with NDVI and Landsat-8 imagery; analysed 8 years of urbanization and green-space data in Karachi; B.E. project on an AI device for the hearing impaired.",
+      "selected_publications": [
+        "Impacts of Urbanization on Green Spaces of the Densely Populated City of Karachi, Pakistan"
+      ],
+      "research_areas_source": "derived",
+      "domain_tags": [
+        "ai-ml",
+        "networks",
+        "cybersecurity"
+      ],
+      "area_tags": [
+        "remote-sensing"
+      ],
+      "name_status": "partial",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "9d32948b-5e90-49b1-810b-676dc981b27c",
+      "university_id": null,
+      "name": "Dr. Fakhra Aftab",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Computer vision",
+        "Web semantics",
+        "Software engineering",
+        "Deep learning",
+        "Embedded systems design",
+        "Performance analysis and optimization"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'2012':39 '2013':71 '2015':33 '2017':61 '2026':26 'aftab':3 'ai':82 'ai-ml':81 'analysi':20 'architectur':35 'award':58 'b.e':38,55 'best':56 'class':41,52 'comput':4,8,24,34,79 'computer-vis':78 'coordin':77 'deep':14 'department':75 'design':18,37 'dr':1 'embed':16,27,84 'engin':7,13,65,88 'fakhra':2 'final':67 'first':40,42,51,53 'gold':45,48 'inform':5 'intellect':60 'internship':76 'learn':15 'm.engg':32 'machin':30 'medal':46,49 'ml':83 'ned':47 'optim':22 'paper':57 'pec':63 'pec-regist':62 'perform':19 'phd':23 'posit':43,54 'project':69 'regist':64 'semant':11 'serv':73 'sinc':70 'softwar':12,87 'software-engin':86 'supervis':66 'system':6,17,25,28,36 'vision':9,31,80 'web':10,85 'year':68",
+      "created_at": "2026-10-26T12:26:05.41593+00:00",
+      "title": "Dr.",
+      "slug": "fakhra-aftab",
+      "rank": "Assistant Professor",
+      "qualification": "PhD Computer Systems (2026), embedded systems for machine vision; M.Engg 2015 (Computer Architecture & Systems Design); B.E. 2012, First Class First Position and Gold Medal, NED.",
+      "highlights": "Gold Medal and First Class First Position (B.E.); Best Paper Award at INTELLECT 2017; PEC-registered engineer; supervising final year projects since 2013 and serving as departmental internship coordinator.",
+      "selected_publications": [
+        "Web Ontology based Multi-level CACHE Simulator, IEEE C-CODE (2017)"
+      ],
+      "research_areas_source": "stated",
+      "domain_tags": [
+        "computer-vision",
+        "ai-ml",
+        "embedded",
+        "web"
+      ],
+      "area_tags": [
+        "software-engineering"
+      ],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "12877116-d568-44d7-b3b1-57274612ebf3",
+      "university_id": null,
+      "name": "Dr. Tariq Mehmood",
+      "department": "Computer Systems Engineering",
+      "research_areas": [
+        "Embedded Systems",
+        "IoT",
+        "Robotics"
+      ],
+      "publications": [],
+      "contact_route": "mailto:tariqm@neduet.edu.pk",
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'comput':4 'dr':1 'embed':7 'engin':6 'iot':9 'mehmood':3 'robot':10 'system':5,8 'tariq':2",
+      "created_at": "2026-10-25T13:21:17.813461+00:00",
+      "title": null,
+      "slug": null,
+      "rank": null,
+      "qualification": null,
+      "highlights": null,
+      "selected_publications": [],
+      "research_areas_source": null,
+      "domain_tags": [],
+      "area_tags": [],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "4bf551d4-ed08-437a-a7a3-1921aff1d3c0",
+      "university_id": null,
+      "name": "Dr. Maria Waqas",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Computational biology and bioinformatics",
+        "Cytomorphic and neuromorphic hardware design",
+        "Deep learning",
+        "Object detection and tracking",
+        "Electronic integrated circuit design",
+        "High performance computing"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'2.3':73 '2001':44 '2008':36 '2017':68 '2019':34 '2023':81 '4.0':42 '5th':45 'ai':83 'ai-ml':82 'approv':49 'architectur':38 'award':67 'b.e':43 'best':65 'big':59 'bioinformat':11 'biolog':9,32,93 'cell':80 'center':57 'cgpa':41 'circuit':25 'cloud':62,99 'co':53 'co-pi':52 'comput':4,8,29,31,37,63,86,92 'computational-biolog':91 'computer-vis':85 'cytomorph':12 'data':60 'deep':17 'deputi':75 'design':16,26,40 'detect':20 'director':76 'dr':1 'electron':23 'engin':7 'enhanc':79 'fund':71 'hardwar':15,96 'healthcar':89 'healthcare-tech':88 'hec':48 'hec-approv':47 'high':27 'hpc':98 'hpc-cloud':97 'ii':77 'inform':5 'integr':24 'learn':18 'm':74 'm.engg':35 'maria':2 'ml':84 'nation':56 'ned':33 'nedaasc':64 'neuromorph':14 'object':19 'perform':28 'phd':30,50,70 'pi':54 'posit':46 'public':66 'qualiti':78 'rs':72 'supervisor':51 'system':6,39 'tech':90 'track':22 'vision':87 'vlsi':95 'vlsi-hardwar':94 'waqa':3",
+      "created_at": "2026-10-26T12:26:08.719296+00:00",
+      "title": "Dr.",
+      "slug": "maria-waqas",
+      "rank": null,
+      "qualification": "PhD Computational Biology, NED (2019); M.Engg 2008 (Computer Architecture & System Design, CGPA 4.0); B.E. 2001 (5th position).",
+      "highlights": "HEC-approved PhD supervisor; Co-PI of National Center in Big Data and Cloud Computing; NEDAASC Best Publication Award 2017; MoST PhD funding (Rs 2.3M); Deputy Director II, Quality Enhancement Cell (2023-).",
+      "selected_publications": [
+        "An Analog Electronic Circuit Model for cAMP-dependent Pathway: towards creation of Silicon life, AIMS Bioengineering (2022)",
+        "Automatic Object Tracking and Segmentation using Unsupervised SiamMask, IEEE Access (2021)"
+      ],
+      "research_areas_source": "stated",
+      "domain_tags": [
+        "ai-ml",
+        "computer-vision",
+        "healthcare-tech"
+      ],
+      "area_tags": [
+        "computational-biology",
+        "vlsi-hardware",
+        "hpc-cloud"
+      ],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "0a67ae75-e62e-466e-903f-7595b2130aac",
+      "university_id": null,
+      "name": "Dr. Kashif Asrar",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Machine learning",
+        "Data science",
+        "Data analytics"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'-2021':40 '12':30 '2009':27 '2012':22 '2013':39 'ai':68 'ai-ml':67 'analyt':13 'asrar':3 'author':59 'b.e':24 'botnet':63 'charg':43 'co':58 'co-author':57 'comput':4,15,20,25 'coordin':38 'cryptographi':66 'data':10,12,70 'department':46 'dr':1 'engin':7,18 'final':35 'in-charg':41 'inform':5,16 'iot':65 'kashif':2 'lab':48 'learn':9 'lectur':49 'm.engg':19 'machin':8 'member':56 'ml':69 'ned':28,53 'paper':61 'pec':55 'phd':14 'project':37 'repres':50 'research':47 'scienc':11 'syndic':54 'system':6,17,21,26 'teach':34 'univers':33 'year':31,36",
+      "created_at": "2026-10-26T12:26:06.703093+00:00",
+      "title": "Dr.",
+      "slug": "kashif-asrar",
+      "rank": null,
+      "qualification": "PhD Computer & Information Systems Engineering; M.Engg (Computer Systems) 2012 and B.E. (Computer Systems) 2009, NED; about 12 years of university teaching.",
+      "highlights": "Final Year Project coordinator 2013-2021; in-charge of the departmental research lab; lecturer representative on the NED Syndicate; PEC member; co-author of papers on BOTNETs and IoT cryptography.",
+      "selected_publications": [
+        "Evaluating the Performance Parameters of Cryptographic Algorithms for IoT Based Devices, ETASR (2021)",
+        "BOTNETs: A Network Security Issue, IJACSA (2020)"
+      ],
+      "research_areas_source": "stated",
+      "domain_tags": [
+        "ai-ml",
+        "data"
+      ],
+      "area_tags": [],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "bbc14cef-79ca-40d9-adf1-0a34a877db76",
+      "university_id": null,
+      "name": "Ms. Ibshar Ishrat",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Queueing theory",
+        "Simulation modelling",
+        "Rare-event simulation",
+        "Student-project areas: blockchain",
+        "deepfake detection",
+        "computer vision",
+        "fintech"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'2016':58 '2021':31 '2022':73 'advisor':49 'ai':81 'ai-ml':80 'april':30 'area':19 'arfeen':36 'asad':35 'b.e':40 'blockchain':20,75 'class':48 'comparison':61 'comput':4,23,78 'computer-vis':77 'content':45 'cs':38,41 'cybersecur':76 'deepfak':21 'department':43 'detect':22 'door':53 'dr':33 'engin':7 'event':14 'fintech':25,83 'ibshar':2 'icci':57 'inform':5 'ishrat':3 'lock':54 'm.engg':37 'm/m/1/k':70 'manag':46 'ml':82 'model':11 'ms':1 'muhammad':34 'ned':42 'network':74 'phd':26 'present':50 'progress':28 'project':18,55 'publish':59 'queue':8,71 'rare':13 'rare-ev':12 'reduct':65 'retrial':69 'simul':10,15,72,84 'sinc':29 'smart':52 'student':17 'student-project':16 'system':6 'techniqu':66 'theori':9 'varianc':64 'variance-reduct':63 'vision':24,79 'websit':44",
+      "created_at": "2026-10-26T12:26:07.206187+00:00",
+      "title": "Ms.",
+      "slug": "ibshar-ishrat",
+      "rank": "Lecturer",
+      "qualification": "PhD in progress (since April 2021) under Dr. Muhammad Asad Arfeen; M.Engg (CS) and B.E. (CS), NED.",
+      "highlights": "Departmental website content manager and class advisor; presented the Smart Door Lock project at ICCIS 2016; published a comparison of variance-reduction techniques for a retrial M/M/1/K queue (SIMULATION, 2022).",
+      "selected_publications": [
+        "A comparison of variance reduction techniques in the simulation of a retrial M/M/1/K queue, SIMULATION (2022)"
+      ],
+      "research_areas_source": "stated+derived",
+      "domain_tags": [
+        "networks",
+        "blockchain",
+        "cybersecurity",
+        "computer-vision",
+        "ai-ml",
+        "fintech"
+      ],
+      "area_tags": [
+        "simulation"
+      ],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "7636b937-6b65-4fac-a237-edf248c634ae",
+      "university_id": null,
+      "name": "Dr. Muhammad Asad Arfeen",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Cybersecurity: malware",
+        "ransomware",
+        "DDoS detection",
+        "digital forensics",
+        "Computer networks and Internet traffic modelling",
+        "Energy-efficient networks and data centers",
+        "Quantum key distribution"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'11.4':75 '2004':46 '2007':44 '2015':40 '26':88 'ai':95 'ai-ml':94 'approv':50 'arfeen':4 'articl':91 'asad':3 'b.e':45 'canterburi':37 'capit':86 'center':28,61 'comput':5,16,33,42 'cyber':63 'cybersecur':9,92 'data':27,97 'ddos':12 'detect':13 'digit':14 'director':54,66 'distribut':31 'dr':1 'effici':24 'energi':23 'energy-effici':22 'engin':8 'forens':15 'hec':49,77 'hec-approv':48 'inform':6 'intellig':83 'internet':19,57 'jcr':89 'journal':90 'key':30 'lab':59 'm':76 'm.engg':41 'malwar':10 'market':87 'ml':96 'model':21 'muhammad':2 'nation':60 'nccpl':80 'ned':47,67 'network':17,25,93 'new':38 'park':70 'phd':32,51 'pi':71 'pkr':74 'project':65,78 'quantum':29,98 'ransomwar':11 'scienc':34,68 'scientif':53 'secur':58,64 'supervisor':52 'system':7,43 'technolog':69 'threat':82 'traffic':20 'univers':35 'zealand':39",
+      "created_at": "2026-10-26T12:26:06.451652+00:00",
+      "title": "Dr.",
+      "slug": "muhammad-asad-arfeen",
+      "rank": "Professor / Associate Professor",
+      "qualification": "PhD Computer Science, University of Canterbury, New Zealand (2015); M.Engg Computer Systems 2007; B.E. 2004, NED. HEC-approved PhD supervisor.",
+      "highlights": "Scientific Director of the Internet Security Lab, National Center for Cyber Security; Project Director, NED Science & Technology Park; PI of a PKR 11.4M HEC project with NCCPL on threat intelligence for the capital market; 26 JCR journal articles.",
+      "selected_publications": [
+        "The role of the Weibull distribution in modelling traffic in Internet access and backbone core networks, Journal of Network and Computer Applications (2019)",
+        "Process based volatile memory forensics for ransomware detection, Concurrency and Computation (2022)"
+      ],
+      "research_areas_source": "stated+derived",
+      "domain_tags": [
+        "cybersecurity",
+        "networks",
+        "ai-ml",
+        "data"
+      ],
+      "area_tags": [
+        "quantum"
+      ],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "89d712be-8ea9-40cf-9683-a71d5b54c864",
+      "university_id": null,
+      "name": "Dr. Hameeza Ahmed",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Big data computing",
+        "Compilers",
+        "Machine learning",
+        "Computer architecture"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'2012':29 '2015':23 '2019':49 '2021':21,36 '2022':45 '3':33 'ahm':3 'ai':61 'ai-ml':60 'approv':39 'architectur':15,25,66 'award':32 'b.e':28 'best':30 'big':8,17 'compil':11,51,63 'comput':4,10,14,19,24,65 'computer-architectur':64 'coordin':43 'data':9,18,59 'date':48 'design':27 'dr':1 'engin':7 'fydp':42 'hameeza':2 'hec':38 'hec-approv':37 'inform':5 'instruct':58 'jcr':34 'learn':13 'm.engg':22 'machin':12 'memori':57 'ml':62 'ned':20 'paper':35 'phd':16,40 'process':55 'processing-in-memori':54 'publish':46 'research':31 'select':52 'sinc':44 'supervisor':41 'system':6,26",
+      "created_at": "2026-10-26T12:26:05.691318+00:00",
+      "title": "Dr.",
+      "slug": "hameeza-ahmed",
+      "rank": null,
+      "qualification": "PhD Big Data Computing, NED (2021); M.Engg 2015 (Computer Architecture & Systems Design); B.E. 2012.",
+      "highlights": "Best Researcher Award (3 JCR papers, 2021); HEC-approved PhD supervisor; FYDP coordinator since 2022; published at DATE 2019 on compiler selection of processing-in-memory instructions.",
+      "selected_publications": [
+        "Toward a novel engine for compiler optimization space exploration of big data workloads, Software: Practice and Experience (2022)",
+        "A Structured Approach towards Big Data Identification, IEEE Transactions on Big Data (2021)"
+      ],
+      "research_areas_source": "stated",
+      "domain_tags": [
+        "data",
+        "ai-ml"
+      ],
+      "area_tags": [
+        "compilers",
+        "computer-architecture"
+      ],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "67675907-890f-40f5-a9cb-e371ae84ec98",
+      "university_id": null,
+      "name": "Ms. Syeda Hafsa Ahmed",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Deep learning",
+        "Embedded computing",
+        "Approximate computing",
+        "Computer vision",
+        "Point-of-care devices",
+        "Intelligent traffic management systems"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'2012':46 '2015':43 '2021':34,66 'adher':74 'ahm':4 'ai':87 'ai-ml':86 'akuh':76 'app':71 'approxim':13,36 'author':49 'b.e':45 'backlog':83 'care':20 'cnn':55 'communiti':78 'comput':5,12,14,15,29,37,90 'computer-vis':89 'coordin':85 'count':59 'cours':84 'deep':9 'department':77 'detect':57 'devic':21 'embed':11,39,92 'engin':8,31 'faster':52 'focal':80 'framework':60 'hafsa':3 'healthcar':94 'healthcare-tech':93 'honet':65 'ieee':64 'inform':6 'intellig':22 'lead':48 'learn':10,41 'm.engg':42,67 'machin':40 'manag':24 'medic':73 'ml':88 'mobil':70 'ms':1 'ned':47 'nov':33 'person':81 'phd':26 'point':18 'point-of-car':17 'progress':28 'r':54 'r-cnn':53 'research':68 'servic':79 'sinc':32 'syeda':2 'system':7,25,30 'tech':95 'traffic':23,63 'undisciplin':62 'vehicl':56 'vision':16,91",
+      "created_at": "2026-10-26T12:26:05.946433+00:00",
+      "title": "Ms.",
+      "slug": "syeda-hafsa-ahmed",
+      "rank": "Lecturer",
+      "qualification": "PhD in progress (Computer Systems Engineering, since Nov 2021) on approximate computing in embedded machine learning; M.Engg 2015 and B.E. 2012, NED.",
+      "highlights": "Lead author of a Faster R-CNN vehicle detection and counting framework for undisciplined traffic (IEEE HONET 2021); M.Engg research on mobile apps for medication adherence with AKUH; departmental Community Service focal person and backlog course coordinator.",
+      "selected_publications": [
+        "Faster RCNN Based Vehicle Detection and Counting Framework for Undisciplined Traffic Conditions, IEEE HONET (2021)"
+      ],
+      "research_areas_source": "stated",
+      "domain_tags": [
+        "ai-ml",
+        "computer-vision",
+        "embedded",
+        "healthcare-tech"
+      ],
+      "area_tags": [],
+      "name_status": "inferred",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "93024fb5-3a8a-4154-a043-b210651f5bb6",
+      "university_id": null,
+      "name": "Mr. Engr. Ali Akhtar",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Health information systems",
+        "OBE management information systems",
+        "Web and software development",
+        "Augmented and virtual reality",
+        "Machine learning for assistive and medical systems"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'2016':56 '2022':36 'abba':44 'aga':60 'ai':96 'ai-ml':95 'akhtar':4 'ali':3,45 'anwar':40 'april':35 'ar':93 'ar-vr':92 'assist':27 'augment':20 'b.e':49 'bank':76,81 'blood':75 'blood-bank':74 'built':67 'cell':80 'comput':5 'cs':47,50 'department':83 'develop':19 'dr':38,42 'educ':102 'education-tech':101 'engin':8,100 'engr':2 'geo':65 'health':9 'healthcar':90 'healthcare-tech':89 'hospit':63,73 'industri':85 'industry-liaison':84 'inform':6,10,14 'khan':61 'learn':25 'liaison':86 'm.engg':46 'machin':24 'manag':13 'medic':29 'ml':97 'mr':1 'ned':51,54,69 'obe':12,70 'phd':31 'progress':33 'raheela':39 'realiti':23 'repres':87 'sinc':34,55 'softwar':18,99 'software-engin':98 'stem':79 'stem-cell-bank':78 'sy':43 'system':7,11,15,30,71,82 'teach':52 'tech':91,103 'tv':66 'univers':62 'virtual':22 'vr':94 'web':16,88 'work':58",
+      "created_at": "2026-10-26T12:26:06.199151+00:00",
+      "title": "Mr. Engr.",
+      "slug": "ali-akhtar",
+      "rank": null,
+      "qualification": "PhD in progress (since April 2022) under Dr. Raheela Anwar and Dr. Syed Abbas Ali; M.Engg (CS) and B.E. (CS), NED.",
+      "highlights": "Teaching at NED since 2016 after work at Aga Khan University Hospital and Geo TV; built the NED OBE system and hospital blood-bank and stem-cell-bank systems; departmental industry-liaison representative.",
+      "selected_publications": [
+        "Speech Feature Selection of Normal and Autistic children using Filter and Wrapper Approach, IJCSNS (2021)",
+        "Virtual Reality in Gymnasium: Stationary bike using Hall-Effect Sensor and Bluetooth BLE, IJCSNS (2022)"
+      ],
+      "research_areas_source": "stated+derived",
+      "domain_tags": [
+        "web",
+        "healthcare-tech",
+        "ar-vr",
+        "ai-ml"
+      ],
+      "area_tags": [
+        "software-engineering",
+        "education-tech"
+      ],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "b7875355-7374-4a48-9903-75db90b4ab4f",
+      "university_id": null,
+      "name": "Dr. Muhammad Ali Ismail",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Computer architecture and multi-core processors",
+        "Big data and cloud computing",
+        "Many-objective optimization",
+        "Software-defined networking and network security",
+        "Machine learning for remote sensing"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'17m':83 '2014':63 '2018':72 '2021':90 '2022':84 '50m':89 '95m':71 'ai':95 'ai-ml':94 'ali':3 'approv':46 'architectur':10,99 'big':16 'binari':54 'binary-tre':53 'cach':57 'cloud':19,102 'comput':5,9,20,98 'computer-architectur':97 'core':14,61 'cybersecur':93 'data':17,91 'defin':27 'deforest':86 'detail':38 'detect':79 'dr':1 'engin':8 'exascal':67 'fund':75 'given':40 'hec':45,74 'hec-approv':44 'hec-fund':73 'hpc':101 'hpc-cloud':100 'inform':6 'ismail':4 'lab':69 'learn':33 'machin':32 'mani':22 'many-object':21 'ml':81,96 'monitor':87 'muhammad':2 'multi':13,60 'multi-cor':12,59 'multilevel':56 'network':28,30,92 'object':23 'open':68 'optim':24,103 'patent':50 'phd':37,47 'pi':64 'pkr':70,82,88 'processor':15,62 'project':76 'remot':35,105 'remote-sens':104 'secur':31 'sens':36,106 'softwar':26 'software-defin':25 'sourc':43 'sunspot':78 'supervisor':48 'system':7 'tree':55 'us':49",
+      "created_at": "2026-10-26T12:26:07.458551+00:00",
+      "title": "Dr.",
+      "slug": "muhammad-ali-ismail",
+      "rank": null,
+      "qualification": "PhD (details not given in the source); HEC-approved PhD supervisor.",
+      "highlights": "US patent on a binary-tree multilevel cache for multi-core processors (2014); PI of the Exascale Open Lab (PKR 95M, 2018); HEC-funded projects on sunspot detection with ML (PKR 17M, 2022) and deforestation monitoring (PKR 50M, 2021).",
+      "selected_publications": [
+        "Enhanced index for water body delineation using Google Earth Engine, Journal of Water and Climate Change (2022)",
+        "FMPSO: fuzzy-dominance many-objective particle swarm optimization, Evolutionary Intelligence (2022)"
+      ],
+      "research_areas_source": "derived",
+      "domain_tags": [
+        "data",
+        "networks",
+        "cybersecurity",
+        "ai-ml"
+      ],
+      "area_tags": [
+        "computer-architecture",
+        "hpc-cloud",
+        "optimization",
+        "remote-sensing"
+      ],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "5b43620a-4489-4658-a066-6d5dbb75af05",
+      "university_id": null,
+      "name": "Dr. Umar Iftikhar",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Cybersecurity and cyber threat detection",
+        "Machine learning and deep learning for intrusion detection",
+        "IoT security and cryptography",
+        "Computer networks"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'2014':43 '2017':37 '2025':32 '3m':54 'a.f':68 'ai':76 'ai-ml':75 'attack':59 'attack-surfac':58 'ccna':48 'ceh':46 'certifi':44 'cism':45 'co':70 'comput':4,25,28,34,40 'consult':66 'cryptographi':24 'cyber':10 'cybersecur':8,74 'deep':16 'detect':12,20 'dr':1 'electr':39 'endow':50 'engin':7,30,35 'ferguson':69 'firm':73 'former':62 'fund':51 'grant':52 'hamdard':42 'iftikhar':3 'inform':5,64 'information-secur':63 'intrus':19 'iot':21,79 'learn':14,17 'machin':13 'member':72 'ml':77 'model':61 'ms':33 'ned':31 'network':26,78 'phd':27,56 'pkr':53 'pwc':71 'secur':22,65 'ssuet':36 'surfac':60 'system':6,29,41 'threat':11 'umar':2",
+      "created_at": "2026-10-26T12:26:06.953528+00:00",
+      "title": "Dr.",
+      "slug": "umar-iftikhar",
+      "rank": "Assistant Professor",
+      "qualification": "PhD Computer Systems Engineering, NED (2025); MS Computer Engineering, SSUET (2017); BE Electrical (Computer Systems), Hamdard (2014).",
+      "highlights": "Certified CISM, CEH and CCNA; MoST Endowment Fund grant (PKR 3M) for PhD on attack-surface modelling; former information-security consultant at A.F. Ferguson & Co. (PwC member firm).",
+      "selected_publications": [
+        "Enhanced Cyber Threat Detection System Leveraging Machine Learning Using Data Augmentation, IJACSA (2025)",
+        "Evaluating the Performance Parameters of Cryptographic Algorithms for IoT-based Devices, ETASR (2021)"
+      ],
+      "research_areas_source": "derived",
+      "domain_tags": [
+        "cybersecurity",
+        "ai-ml",
+        "networks",
+        "iot"
+      ],
+      "area_tags": [],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "fff3245e-0405-4a1a-b6d3-75d2b8b76ef9",
+      "university_id": null,
+      "name": "Dr. Muhammad Khurram",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Artificial intelligence and computer vision",
+        "Smart cities",
+        "RF IC design",
+        "VLSI and digital signal processing",
+        "On-chip bio-systems",
+        "Embedded systems and IoT",
+        "5G networks"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'000':82 '2002':52 '2006':48 '2012':43 '5g':33 '75m':74 '80':81 'agricultur':99 'agriculture-tech':98 'agritech':69 'ai':68,90 'ai-ml':89 'artifici':8 'b.e':50 'bio':27 'bio-system':26 'chip':25 'citi':14,61 'comput':4,11,93 'computer-vis':92 'copi':75 'crop':77 'crop2x':71 'cs':47,51 'daad':83 'design':17,38 'detect':86 'digit':20 'director':54 'dr':1 'embed':29,96 'engin':7 'eur':80 'founder':66 'fund':88 'hardwar':103 'head':58 'ic':16,37 'inform':5 'intellig':9 'iot':32,76,95 'khurram':3 'lab':62 'led':72 'm.e':44 'massey':39 'ml':91 'muhammad':2 'ncai':64 'ned':53,65 'network':34,97 'new':41 'on-chip':23 'phd':35 'process':22 'rcai':56 'research':46 'rf':15 'robot':87 'rs':73 'scienc':36 'scout':78 'signal':21 'smart':13,60 'startup':70 'system':6,28,30 'tech':100 'univers':40 'vision':12,94 'vlsi':18,102 'vlsi-hardwar':101 'weed':85 'weed-detect':84 'zealand':42",
+      "created_at": "2026-10-26T12:26:07.711562+00:00",
+      "title": "Dr.",
+      "slug": "muhammad-khurram",
+      "rank": "Professor (BPS-21)",
+      "qualification": "PhD (Science), IC Design, Massey University, New Zealand (2012); M.E. by research (CS) 2006 and B.E. (CS) 2002, NED.",
+      "highlights": "Director of RCAI and head of Smart City Lab at NCAI (NED); founder of AI agritech startup Crop2x; led Rs 75M (CoPI) IoT crop scouting and EUR 80,000 (DAAD) weed-detection robot funding.",
+      "selected_publications": [],
+      "research_areas_source": "stated",
+      "domain_tags": [
+        "ai-ml",
+        "computer-vision",
+        "iot",
+        "embedded",
+        "networks",
+        "agriculture-tech"
+      ],
+      "area_tags": [
+        "vlsi-hardware"
+      ],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "642912db-3c1e-4388-a6fc-369b98758d80",
+      "university_id": null,
+      "name": "Dr. Shahab Tahzeeb",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Computer architecture",
+        "Mathematical modeling",
+        "Bioinformatics",
+        "Machine learning"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'-2021':47 '1994':26 '2004':23 '2011':46 '2021':63 '2022':21 '30':31 'ai':40,68 'ai-ml':67 'architectur':9,75 'author':56 'b.e':25 'bioinformat':12 'biolog':78 'career':59 'charg':37 'co':55 'co-author':54 'comput':4,8,16,27,74,77 'computational-biolog':76 'computer-architectur':73 'coordin':45 'dr':1 'e':50 'educompass':66 'engin':7,19 'final':42 'guidanc':60 'haider':51 'healthcar':71 'healthcare-tech':70 'icci':62 'in-charg':35 'inform':5,17 'lab':41 'learn':14 'm.engg':22 'machin':13 'mathemat':10 'ml':69 'model':11 'ned':20,29 'nishan':49 'nishan-e-haid':48 'phd':15 'project':44 'recipi':53 'relat':64 'scholarship':52 'shahab':2 'smart':58 'system':6,18,28,61 'tahzeeb':3 'teach':34 'tech':72 'year':32,43",
+      "created_at": "2026-10-26T12:26:08.467639+00:00",
+      "title": "Dr.",
+      "slug": "shahab-tahzeeb",
+      "rank": null,
+      "qualification": "PhD Computer & Information Systems Engineering, NED (2022); M.Engg 2004 and B.E. 1994 (Computer Systems), NED; about 30 years of teaching.",
+      "highlights": "In-charge of the AI Lab; Final Year Project coordinator 2011-2021; Nishan-e-Haider Scholarship recipient; co-author of Smart Career Guidance System (ICCIS 2021), related to EduCompass.",
+      "selected_publications": [
+        "A Neural Network-Based Multi-Label Classifier for Protein Function Prediction, ETASR (2022)",
+        "Smart Career Guidance System, ICCIS (2021)"
+      ],
+      "research_areas_source": "stated",
+      "domain_tags": [
+        "ai-ml",
+        "healthcare-tech"
+      ],
+      "area_tags": [
+        "computer-architecture",
+        "computational-biology"
+      ],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    },
+    {
+      "id": "2e55299e-8e4e-468b-a5c5-ec56abdff61d",
+      "university_id": null,
+      "name": "Ms. Fauzia Yasir",
+      "department": "Computer & Information Systems Engineering",
+      "research_areas": [
+        "Embedded system design",
+        "Natural language processing and language digitization",
+        "Computer vision and image processing",
+        "OCR",
+        "Deep learning"
+      ],
+      "publications": [],
+      "contact_route": null,
+      "source": null,
+      "is_simulated": false,
+      "review_status": "published",
+      "tsv": "'2007':39 '2014':37 '2021':33 '2022':52 '2026':35 'ai':45,68,88 'ai-ml':87 'award':43 'award-win':42 'b.e':38 'base':61 'care':76 'career':78 'comput':4,17,26,85 'computer-vis':84 'core':69 'counselor':81 'deep':23 'design':10,31 'devic':51 'digit':16,29 'effici':67 'embed':8,82 'enabl':46 'energi':66 'energy-effici':65 'engin':7,28 'fauzia':2 'fpga':71 'ignit':54 'ignite-ngiri-n':53 'imag':20 'inform':5 'june':34 'languag':12,15 'learn':24 'm.engg':36 'ml':89 'mobil':50 'ms':1 'natur':11 'ned':32,40,56 'ngiri':55 'nlp':83 'ocr':22,48,63 'ongo':58 'phd':25 'point':74 'point-of-car':73 'process':13,21 'student':77 'supervis':41 'system':6,9,27,30 'transform':60 'transformer-bas':59 'urdu':47,62 'vision':18,86 'well':80 'win':44 'yasir':3",
+      "created_at": "2026-10-26T12:26:08.970813+00:00",
+      "title": "Ms.",
+      "slug": "fauzia-yasir",
+      "rank": null,
+      "qualification": "PhD Computer Systems Engineering (Digital System Design), NED, 2021-June 2026; M.Engg 2014; B.E. 2007, NED.",
+      "highlights": "Supervised award-winning AI Enabled Urdu OCR for Mobile Devices (2022, IGNITE-NGIRI-NED) and ongoing Transformer-based Urdu OCR and energy-efficient AI core on FPGA for point-of-care; student career and wellness counselor.",
+      "selected_publications": [
+        "Photometric Ligature Extraction Technique for Urdu Optical Character Recognition, ETASR (2021)",
+        "Computationally efficient HEVC/H.265 motion estimation for low power applications, ICICT (2015)"
+      ],
+      "research_areas_source": "stated",
+      "domain_tags": [
+        "embedded",
+        "nlp",
+        "computer-vision",
+        "ai-ml"
+      ],
+      "area_tags": [],
+      "name_status": "confirmed",
+      "consent_note": null,
+      "department_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "deleted_at": null,
+      "delete_state": null,
+      "updated_by": null,
+      "updated_at": null
+    }
+  ]
+}

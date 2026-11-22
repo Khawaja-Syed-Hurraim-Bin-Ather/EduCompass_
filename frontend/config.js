@@ -8,9 +8,9 @@
         if (stored) return stored.replace(/\/+$/, '');
       } catch (e) {}
       if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-        return 'http://localhost:4000';
+        return (location.port === '4000') ? '' : 'http://localhost:4000';
       }
-      return 'https://edu-compass-2o2k.vercel.app';
+      return window.location.origin || 'https://edu-compass-2o2k.vercel.app';
     }
   };
 })();
