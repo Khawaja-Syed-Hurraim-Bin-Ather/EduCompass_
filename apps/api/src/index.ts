@@ -63,7 +63,17 @@ app.use(requestSanitizer);
 // 5. Security event logger — no secrets ever logged (Rule #11)
 app.use(securityLogger);
 
-// ── Health check (not rate-limited) ─────────────────────────────────────
+// ── Root & Health checks (not rate-limited) ─────────────────────────────
+app.get('/', (_req, res) => {
+  res.json({
+    status: 'ok',
+    service: 'educompass-api',
+    version: '1.0.0',
+    message: 'EduCompass CISE Backend API is running.',
+    health: '/health',
+  });
+});
+
 app.get('/health', (_req, res) => {
   res.json({
     status: 'ok',
