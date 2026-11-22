@@ -10,7 +10,7 @@
 
 import { Request, Response, NextFunction } from 'express';
 import rateLimit from 'express-rate-limit';
-import { apiError } from '@educompass/shared';
+import { apiError } from '../shared';
 
 // ─── 1. Tiered Rate Limiters ─────────────────────────────────────────────────
 

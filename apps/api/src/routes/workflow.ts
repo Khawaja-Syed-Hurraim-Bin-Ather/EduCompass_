@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { z } from 'zod';
 import crypto from 'crypto';
-import { apiError } from '@educompass/shared';
+import { apiError } from '../shared';
 import { supabaseAdmin } from '../lib/supabase';
 import { requireAdminAuth, requireStepUp } from '../middleware/admin-auth';
 import { generateApprovalMessage, ChangeDiffItem } from '../lib/diff-message-generator';

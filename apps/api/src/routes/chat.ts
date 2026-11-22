@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import { z } from 'zod';
-import { apiError } from '@educompass/shared';
+import { apiError } from '../shared';
 import { supabaseAdmin } from '../lib/supabase';
 import { generateChatResponse, LLM_CONFIG } from '../lib/llm-gateway';
 import { faqMatcher } from '../lib/faq-matcher';

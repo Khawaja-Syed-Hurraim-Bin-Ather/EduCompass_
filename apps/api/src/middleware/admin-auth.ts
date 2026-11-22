@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import crypto from 'crypto';
-import { apiError } from '@educompass/shared';
+import { apiError } from '../shared';
 import { supabaseAdmin } from '../lib/supabase';
 import { AdminRole, Resource, Action, checkPermission } from '../lib/admin-permissions';
 

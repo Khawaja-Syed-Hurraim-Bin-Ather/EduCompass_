@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import { apiError } from '@educompass/shared';
+import { apiError } from '../shared';
 import { supabaseAdmin } from '../lib/supabase';
 import { requireAdminAuth } from '../middleware/admin-auth';
 

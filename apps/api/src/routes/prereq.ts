@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import { z } from 'zod';
-import { apiError } from '@educompass/shared';
+import { apiError } from '../shared';
 import { supabaseAdmin } from '../lib/supabase';
 import {
   PrereqGraph,
@@ -12,7 +12,7 @@ import {
   simulateCourseFailure,
   calculateCourseImportance,
   findCriticalPath,
-} from '@educompass/engine';
+} from '../engine';
 
 export const prereqRouter = Router();
 

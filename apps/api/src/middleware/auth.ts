@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { apiError, UserRole } from '@educompass/shared';
+import { apiError, UserRole } from '../shared';
 import { supabaseAdmin } from '../lib/supabase';
 
 export interface AuthenticatedUser {

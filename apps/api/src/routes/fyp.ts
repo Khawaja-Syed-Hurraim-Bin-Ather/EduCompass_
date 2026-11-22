@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import { z } from 'zod';
-import { apiError, paginate } from '@educompass/shared';
+import { apiError, paginate } from '../shared';
 import { supabaseAdmin } from '../lib/supabase';
 import { requireRole } from '../middleware/auth';
 import { getEmbedding } from '../lib/llm-gateway';

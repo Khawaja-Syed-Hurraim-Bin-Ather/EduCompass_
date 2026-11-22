@@ -11,8 +11,6 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@educompass/engine": "workspace:*",
-    "@educompass/shared": "workspace:*",
     "@supabase/supabase-js": "^2.46.0",
     "bcryptjs": "^3.0.3",
     "cookie-parser": "^1.4.7",

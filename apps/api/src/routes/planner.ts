@@ -1,11 +1,11 @@
 import { Router, Request, Response } from 'express';
 import { z } from 'zod';
-import { apiError } from '@educompass/shared';
+import { apiError } from '../shared';
 import {
   validateSemesterPlan,
   generateDefaultSchedulePlan,
   StudentSchedulePlan,
-} from '@educompass/engine';
+} from '../engine';
 import { buildDefaultCurriculumGraph } from './prereq';
 import { requireRole } from '../middleware/auth';
 import { supabaseAdmin } from '../lib/supabase';
