@@ -24,11 +24,13 @@ node_modules/
 .next/
 out/
 
-# Build output
+# Build output — dist/ is ignored everywhere EXCEPT apps/api/dist (needed for Vercel)
 dist/
 build/
 coverage/
 *.tsbuildinfo
+!apps/api/dist/
+!apps/api/dist/**
 
 # Python
 __pycache__/
