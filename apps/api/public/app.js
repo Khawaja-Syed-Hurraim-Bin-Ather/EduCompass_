@@ -185,22 +185,13 @@ routes['/login']={view(){
    <p class="err" id="aerr" role="alert"></p>
    <button class="btn btn-primary" style="width:100%" id="asub-btn">${reg?'Create account':'Sign in'}</button>
   </form>
-  <div class="notice info" style="margin-top:18px">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px">
-      <span style="font-weight:700">Student Demo Accounts</span>
-      <span class="tag gold" style="font-size:10px">1-Click Sign-in</span>
-    </div>
-    <p style="font-size:12.5px;margin:0 0 8px;color:var(--text-muted)">Click to test as pre-enrolled student (unlocks courses & planner):</p>
-    <div style="display:flex;gap:8px;flex-wrap:wrap">
-      <button type="button" class="btn btn-sm btn-line" data-fill="student" style="font-size:12px;padding:4px 10px">Student (Sem 5 · AI/ML)</button>
-      <button type="button" class="btn btn-sm btn-line" data-fill="senior" style="font-size:12px;padding:4px 10px">Senior (Sem 7 · FYP)</button>
-    </div>
-  </div>
-  <div class="notice info" style="margin-top:20px">${ic('info')}<span><b>Demo mode.</b> Accounts are stored only in this browser until the live API is connected.</span></div></div></div></div>`;
+   <div style="margin-top:16px;text-align:center"><button type="button" id="admin-link-btn" style="background:none;border:none;color:var(--accent,#6b2737);font-size:13px;cursor:pointer;text-decoration:underline;padding:0">Are you an Admin? Click here</button></div>
+   <div id="admin-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;align-items:center;justify-content:center"><div style="background:#fff;border-radius:16px;padding:28px 24px;max-width:400px;width:92%;box-shadow:0 8px 40px rgba(0,0,0,.18);position:relative"><button id="admin-modal-close" aria-label="Close" style="position:absolute;top:12px;right:14px;background:none;border:none;font-size:22px;cursor:pointer;color:#888">&times;</button><h2 style="margin:0 0 4px;font-size:19px">Admin Sign-in</h2><p style="font-size:12.5px;color:#888;margin:0 0 16px">Pick a demo account to auto-fill, then click Sign in.</p><div style="display:flex;flex-direction:column;gap:10px"><button type="button" class="btn btn-line" data-adm-fill="operator" style="text-align:left;padding:10px 14px"><b>Data Operator</b><span style="display:block;font-size:11.5px;color:#888;font-weight:400">operator.demo@neduet.edu.pk &middot; Demo@Operator26</span></button><button type="button" class="btn btn-line" data-adm-fill="chairman" style="text-align:left;padding:10px 14px"><b>Chairman CISE</b><span style="display:block;font-size:11.5px;color:#888;font-weight:400">chairman.demo@neduet.edu.pk &middot; Demo@Chairman26</span></button><button type="button" class="btn btn-line" data-adm-fill="vc" style="text-align:left;padding:10px 14px"><b>Vice Chancellor</b><span style="display:block;font-size:11.5px;color:#888;font-weight:400">vc.demo@neduet.edu.pk &middot; Demo@Vice26</span></button></div><p style="font-size:11px;color:#aaa;margin:14px 0 0;text-align:center">Admin panel opens at <b>#/admin</b> after sign-in</p></div></div></div>`;
 },after(){
   let mode=location.hash.includes('register')?'up':'in';const sel=new Set();
   const setMode=m=>{mode=m;const up=m==='up';$$('.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.t===m));$('#f-name').hidden=!up;$('#f-reg').hidden=!up;$('#pwh').hidden=!up;$('#atitle').textContent=up?'Create your account':'Welcome back';$('#asub').textContent=up?'It takes under a minute. No university ID needed.':'Sign in with your email and password.';$('#asub-btn').textContent=up?'Create account':'Sign in';$('#aerr').textContent=''};
-  $$('.tabs button').forEach(b=>b.onclick=()=>setMode(b.dataset.t));
+  $$#admin-link-btn?.addEventListener('click',()=>{const m=#admin-modal;m.style.display='flex'});#admin-modal-close?.addEventListener('click',()=>{#admin-modal.style.display='none'});#admin-modal?.addEventListener('click',e=>{if(e.target===#admin-modal)#admin-modal.style.display='none'});('[data-adm-fill]').forEach(b=>b.addEventListener('click',()=>{const map={operator:{email:'operator.demo@neduet.edu.pk',pw:'Demo@Operator26'},chairman:{email:'chairman.demo@neduet.edu.pk',pw:'Demo@Chairman26'},vc:{email:'vc.demo@neduet.edu.pk',pw:'Demo@Vice26'}};const d=map[b.dataset.admFill];if(!d)return;#email.value=d.email;#pw.value=d.pw;#admin-modal.style.display='none';go('/admin')}));
+  ('.tabs button').forEach(b=>b.onclick=()=>setMode(b.dataset.t));
   $('#showpw').onclick=e=>{const p=$('#pw');p.type=p.type==='password'?'text':'password';e.target.textContent=p.type==='password'?'Show':'Hide'};
   $$('#ints .chip').forEach(c=>c.onclick=()=>{const t=c.dataset.i;if(sel.has(t)){sel.delete(t)}else if(sel.size<3){sel.add(t)}else return;c.setAttribute('aria-pressed',sel.has(t))});
   $('#authf').onsubmit=async e=>{e.preventDefault();const err=$('#aerr');err.textContent='';
