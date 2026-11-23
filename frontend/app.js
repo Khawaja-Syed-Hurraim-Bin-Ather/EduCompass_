@@ -185,8 +185,29 @@ routes['/login']={view(){
    <p class="err" id="aerr" role="alert"></p>
    <button class="btn btn-primary" style="width:100%" id="asub-btn">${reg?'Create account':'Sign in'}</button>
   </form>
-   <div style="margin-top:16px;text-align:center"><button type="button" id="admin-link-btn" style="background:none;border:none;color:var(--accent,#6b2737);font-size:13px;cursor:pointer;text-decoration:underline;padding:0">Are you an Admin? Click here</button></div>
-   <div id="admin-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;align-items:center;justify-content:center"><div style="background:#fff;border-radius:16px;padding:28px 24px;max-width:400px;width:92%;box-shadow:0 8px 40px rgba(0,0,0,.18);position:relative"><button id="admin-modal-close" aria-label="Close" style="position:absolute;top:12px;right:14px;background:none;border:none;font-size:22px;cursor:pointer;color:#888">&times;</button><h2 style="margin:0 0 4px;font-size:19px">Admin Sign-in</h2><p style="font-size:12.5px;color:#888;margin:0 0 16px">Pick a demo account to auto-fill, then click Sign in.</p><div style="display:flex;flex-direction:column;gap:10px"><button type="button" class="btn btn-line" data-adm-fill="operator" style="text-align:left;padding:10px 14px"><b>Data Operator</b><span style="display:block;font-size:11.5px;color:#888;font-weight:400">operator.demo@neduet.edu.pk &middot; Demo@Operator26</span></button><button type="button" class="btn btn-line" data-adm-fill="chairman" style="text-align:left;padding:10px 14px"><b>Chairman CISE</b><span style="display:block;font-size:11.5px;color:#888;font-weight:400">chairman.demo@neduet.edu.pk &middot; Demo@Chairman26</span></button><button type="button" class="btn btn-line" data-adm-fill="vc" style="text-align:left;padding:10px 14px"><b>Vice Chancellor</b><span style="display:block;font-size:11.5px;color:#888;font-weight:400">vc.demo@neduet.edu.pk &middot; Demo@Vice26</span></button></div><p style="font-size:11px;color:#aaa;margin:14px 0 0;text-align:center">Admin panel opens at <b>#/admin</b> after sign-in</p></div></div></div>`;
+   <div style="margin-top:16px;text-align:center"><button type="button" id="admin-link-btn" style="background:none;border:none;color:var(--accent,#6b2737);font-size:13px;cursor:pointer;text-decoration:underline;padding:4px 8px;font-weight:500">Are you an Admin? Click here</button></div>
+   <div id="admin-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;align-items:center;justify-content:center;padding:16px;box-sizing:border-box">
+     <div style="background:#fff;color:#1e293b;border-radius:18px;padding:26px 22px;max-width:440px;width:100%;box-shadow:0 12px 40px rgba(0,0,0,.22);position:relative;box-sizing:border-box">
+       <button id="admin-modal-close" type="button" aria-label="Close" style="position:absolute;top:12px;right:14px;background:none;border:none;font-size:24px;line-height:1;cursor:pointer;color:#94a3b8;padding:4px 8px">&times;</button>
+       <h2 style="margin:0 0 6px;font-size:20px;font-weight:700;color:#0f172a">Admin Sign-in</h2>
+       <p style="font-size:13px;color:#64748b;margin:0 0 16px;line-height:1.4">Pick a demo account below to auto-fill credentials:</p>
+       <div style="display:flex;flex-direction:column;gap:10px;width:100%">
+         <button type="button" data-adm-fill="operator" style="display:flex;flex-direction:column;align-items:flex-start;text-align:left;width:100%;box-sizing:border-box;white-space:normal;border:1.5px solid #cbd5e1;border-radius:12px;background:#f8fafc;padding:10px 14px;cursor:pointer;gap:4px">
+           <b style="font-size:14px;color:#600a2c;display:block">Data Operator</b>
+           <span style="font-size:12px;color:#475569;display:block;font-weight:400;line-height:1.4">operator.demo@neduet.edu.pk &middot; <code style="background:#e2e8f0;color:#1e293b;padding:1px 5px;border-radius:4px;font-size:11.5px">Demo@Operator26</code></span>
+         </button>
+         <button type="button" data-adm-fill="chairman" style="display:flex;flex-direction:column;align-items:flex-start;text-align:left;width:100%;box-sizing:border-box;white-space:normal;border:1.5px solid #cbd5e1;border-radius:12px;background:#f8fafc;padding:10px 14px;cursor:pointer;gap:4px">
+           <b style="font-size:14px;color:#600a2c;display:block">Chairman CISE</b>
+           <span style="font-size:12px;color:#475569;display:block;font-weight:400;line-height:1.4">chairman.demo@neduet.edu.pk &middot; <code style="background:#e2e8f0;color:#1e293b;padding:1px 5px;border-radius:4px;font-size:11.5px">Demo@Chairman26</code></span>
+         </button>
+         <button type="button" data-adm-fill="vc" style="display:flex;flex-direction:column;align-items:flex-start;text-align:left;width:100%;box-sizing:border-box;white-space:normal;border:1.5px solid #cbd5e1;border-radius:12px;background:#f8fafc;padding:10px 14px;cursor:pointer;gap:4px">
+           <b style="font-size:14px;color:#600a2c;display:block">Vice Chancellor</b>
+           <span style="font-size:12px;color:#475569;display:block;font-weight:400;line-height:1.4">vc.demo@neduet.edu.pk &middot; <code style="background:#e2e8f0;color:#1e293b;padding:1px 5px;border-radius:4px;font-size:11.5px">Demo@Vice26</code></span>
+         </button>
+       </div>
+       <p style="font-size:11.5px;color:#94a3b8;margin:14px 0 0;text-align:center">Admin panel opens at <b style="color:#64748b">#/admin</b> after sign-in</p>
+     </div>
+   </div></div>`;
 },after(){
   let mode=location.hash.includes('register')?'up':'in';const sel=new Set();
   const setMode=m=>{mode=m;const up=m==='up';$$('.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.t===m));$('#f-name').hidden=!up;$('#f-reg').hidden=!up;$('#pwh').hidden=!up;$('#atitle').textContent=up?'Create your account':'Welcome back';$('#asub').textContent=up?'It takes under a minute. No university ID needed.':'Sign in with your email and password.';$('#asub-btn').textContent=up?'Create account':'Sign in';$('#aerr').textContent=''};
