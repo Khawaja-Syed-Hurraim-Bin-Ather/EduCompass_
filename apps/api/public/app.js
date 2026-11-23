@@ -425,9 +425,9 @@ routes['/assistant']={title:'Assistant',view(){
     </div>
   </div>
   <div class="grid-2" style="grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)">
-    <div class="panel chat" style="display:flex;flex-direction:column;overflow:hidden;padding:0;border:1px solid var(--border);border-radius:var(--radius)">
+    <div class="panel chat chat-view-container">
       <!-- Abdul Bari Integrated Panel Header -->
-      <div style="display:flex;align-items:center;gap:16px;padding:14px 18px;background:var(--surface-2, rgba(96,10,44,0.06));border-bottom:1px solid var(--border)">
+      <div class="chat-header-bar">
         <div style="flex:none;width:76px;height:124px;display:flex;align-items:center;justify-content:center">
           <img id="abdul-panel-img" src="abdul/abdul-idle-full.webp" srcset="abdul/abdul-idle-full.webp 1x, abdul/abdul-idle-full@2x.webp 2x" alt="Abdul Bari" style="width:76px;height:124px;object-fit:contain;display:block;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.22))">
         </div>
@@ -446,19 +446,17 @@ routes['/assistant']={title:'Assistant',view(){
         </div>
       </div>
 
-      <div style="padding:18px;display:flex;flex-direction:column;flex:1">
-        <div class="msgs" id="msgs" aria-live="polite"></div>
-        <div>
-          <div class="quick" id="quick"></div>
-          <form id="cf" style="display:flex;gap:8px">
-            <input class="input" id="ci" maxlength="300" placeholder="Ask about a professor, course, prerequisite or FYP" aria-label="Your question">
-            <button class="btn btn-ink">Ask</button>
-          </form>
-          <div class="counter"><span id="cc">0</span>/300</div>
-        </div>
+      <div class="msgs chat-msgs-scrollable" id="msgs" aria-live="polite"></div>
+      <div class="chat-bottom-dock">
+        <div class="quick" id="quick"></div>
+        <form id="cf" class="chat-input-pill">
+          <input class="chat-input-field" id="ci" maxlength="300" placeholder="Ask Abdul Bari about courses, professors, FYPs..." aria-label="Your question" autocomplete="off">
+          <button class="chat-send-btn" type="submit">Ask</button>
+        </form>
+        <div class="counter" style="margin-top:4px"><span id="cc">0</span>/300</div>
       </div>
     </div>
-    <div id="plan"><div class="panel empty"><h3>Your plan card appears here</h3><p>Answer the four quick questions and you will get a track, courses, professors and next steps.</p></div></div>
+    <div id="plan" class="plan-panel-scrollable"><div class="panel empty"><h3>Your plan card appears here</h3><p>Answer the four quick questions and you will get a track, courses, professors and next steps.</p></div></div>
   </div></div></div>`;
 },after(){
   if(window.Abdul) Abdul.resetState();
@@ -468,8 +466,9 @@ routes['/assistant']={title:'Assistant',view(){
   const say=(t,me,src)=>{chat.msgs.push({t,me,src});drawMsgs()};
   const drawMsgs=()=>{
     msgs.innerHTML=chat.msgs.map(m=>`<div class="msg ${m.me?'me':''}">${!m.me?'<span class="abdul-chat-avatar" style="display:inline-flex;align-items:center;margin-right:8px;vertical-align:middle"><img src="abdul/abdul-idle-head.webp" alt="Abdul" style="width:28px;height:28px;border-radius:4px;object-fit:contain;display:inline-block"></span>':''}${esc(m.t)}${m.src?`<span class="src">Source: ${m.src}</span>`:''}</div>`).join('');
-    msgs.scrollTop=msgs.scrollHeight;
+    setTimeout(()=>{msgs.scrollTop=msgs.scrollHeight;},20);
   };
+  const finishOnboarding=()=>{chat.step=Q.length;quick.innerHTML="";say("Haan, bolo! Kya poochna chahte ho — kisi course, professor, ya FYP ke baare mein?",false,"Abdul Bari");setTimeout(()=>{const ci=$("#ci");if(ci)ci.focus();},50);};
   const ask=()=>{
     if(chat.step<Q.length){
       const chips = Q[chat.step].o.map(([v,l])=>`<button class="chip" data-v="${v}">${l}</button>`).join('');
