@@ -1,4 +1,4 @@
-/* EduCompass frontend: hash-routed single page app. All data comes from /data/*.json, engines from engines.js */
+﻿/* EduCompass frontend: hash-routed single page app. All data comes from /data/*.json, engines from engines.js */
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -21,6 +21,7 @@ const hero=o=>`<section class="thero ${o.tone||''}"><div class="thero-art" style
 const initials=n=>(n||'?').split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase();
 
 /* ---------- session (demo auth: browser-only until the real API is connected) ---------- */
+const PROGRAM_DEFAULT='BE Computer Systems Engineering';
 const DEFAULT_STUDENTS={
   'student.demo@cloud.neduet.edu.pk':{name:'Hamza Khan',email:'student.demo@cloud.neduet.edu.pk',program:PROGRAM_DEFAULT,semester:'5',interests:['ai-ml','computer-vision'],pw:'c89c16b526e18a744d1b74ce3b1a4cc0614ebc225baffb2cb12a0b15a2ab9579'},
   'senior.demo@cloud.neduet.edu.pk':{name:'Ayesha Siddiqui',email:'senior.demo@cloud.neduet.edu.pk',program:PROGRAM_DEFAULT,semester:'7',interests:['cybersecurity','blockchain'],pw:'c89c16b526e18a744d1b74ce3b1a4cc0614ebc225baffb2cb12a0b15a2ab9579'}
@@ -38,8 +39,6 @@ const Session={
   },
   logout(){store.del('session')},
 };
-const PROGRAM_DEFAULT='BE Computer Systems Engineering';
-
 /* ---------- router ---------- */
 const NAV=[['/','Home',0],['/fyp','FYP Portal',0],['/professors','Professors',1],['/planner','Planner',1],['/prerequisites','Prerequisites',1],['/careers','Career Hub',0],['/assistant','Assistant',0]];
 const routes={};let current='/';
