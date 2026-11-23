@@ -21,14 +21,18 @@ const hero=o=>`<section class="thero ${o.tone||''}"><div class="thero-art" style
 const initials=n=>(n||'?').split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase();
 
 /* ---------- session (demo auth: browser-only until the real API is connected) ---------- */
+const DEFAULT_STUDENTS={
+  'student.demo@cloud.neduet.edu.pk':{name:'Hamza Khan',email:'student.demo@cloud.neduet.edu.pk',program:PROGRAM_DEFAULT,semester:'5',interests:['ai-ml','computer-vision'],pw:'c89c16b526e18a744d1b74ce3b1a4cc0614ebc225baffb2cb12a0b15a2ab9579'},
+  'senior.demo@cloud.neduet.edu.pk':{name:'Ayesha Siddiqui',email:'senior.demo@cloud.neduet.edu.pk',program:PROGRAM_DEFAULT,semester:'7',interests:['cybersecurity','blockchain'],pw:'c89c16b526e18a744d1b74ce3b1a4cc0614ebc225baffb2cb12a0b15a2ab9579'}
+};
 const Session={
   get user(){return store.get('session',null)},
   async hash(p){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(p));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')},
-  async register(d){const acc=store.get('accounts',{});const k=d.email.toLowerCase();if(acc[k])throw new Error('An account with this email already exists. Sign in instead.');acc[k]={...d,email:k,pw:await this.hash(d.password)};delete acc[k].password;store.set('accounts',acc);store.set('session',{...acc[k],pw:undefined})},
+  async register(d){const acc={...DEFAULT_STUDENTS,...store.get('accounts',{})};const k=d.email.toLowerCase();if(acc[k])throw new Error('An account with this email already exists. Sign in instead.');acc[k]={...d,email:k,pw:await this.hash(d.password)};delete acc[k].password;store.set('accounts',acc);store.set('session',{...acc[k],pw:undefined})},
   async login(email,password){
     const k=email.toLowerCase();const lock=store.get('lock:'+k,{n:0,until:0});
     if(lock.until>Date.now())throw new Error(`Too many attempts. Try again in ${Math.ceil((lock.until-Date.now())/60000)} min.`);
-    const a=store.get('accounts',{})[k];
+    const acc={...DEFAULT_STUDENTS,...store.get('accounts',{})};const a=acc[k];
     if(!a||a.pw!==await this.hash(password)){lock.n++;if(lock.n>=5){lock.until=Date.now()+15*60000;lock.n=0}store.set('lock:'+k,lock);throw new Error('Email or password is incorrect.')}
     store.del('lock:'+k);store.set('session',{...a,pw:undefined});
   },
@@ -182,7 +186,17 @@ routes['/login']={view(){
    <p class="err" id="aerr" role="alert"></p>
    <button class="btn btn-primary" style="width:100%" id="asub-btn">${reg?'Create account':'Sign in'}</button>
   </form>
-  <div class="divider">or</div><button class="btn btn-line" style="width:100%" disabled title="Google sign-in arrives with the backend">Continue with Google (needs backend)</button>
+  <div class="notice info" style="margin-top:18px">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px">
+      <span style="font-weight:700">Student Demo Accounts</span>
+      <span class="tag gold" style="font-size:10px">1-Click Sign-in</span>
+    </div>
+    <p style="font-size:12.5px;margin:0 0 8px;color:var(--text-muted)">Click to test as pre-enrolled student (unlocks courses & planner):</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button type="button" class="btn btn-sm btn-line" data-fill="student" style="font-size:12px;padding:4px 10px">Student (Sem 5 · AI/ML)</button>
+      <button type="button" class="btn btn-sm btn-line" data-fill="senior" style="font-size:12px;padding:4px 10px">Senior (Sem 7 · FYP)</button>
+    </div>
+  </div>
   <div class="notice info" style="margin-top:20px">${ic('info')}<span><b>Demo mode.</b> Accounts are stored only in this browser until the live API is connected.</span></div></div></div></div>`;
 },after(){
   let mode=location.hash.includes('register')?'up':'in';const sel=new Set();

@@ -18,11 +18,62 @@ const IMPACT={prereq_add:'MAJOR',prereq_remove:'MAJOR',prereq_batch:'MAJOR',sche
 function mk(type,payload,by,status='draft'){const c={id:'CIS-2026-'+hex(),type,payload,module:MODULE[type],impact:IMPACT[type],status,by,created:Date.now(),log:[]};c.title=titleOf(c);return c}
 function seed(){
   const s={changes:[],releases:[],deletions:[],events:[],audit:[],lock:{},clock:0,purges:{},schemes:[]};
-  const op='operator.demo@neduet.edu.pk',p=Data.base.profs[0],f=Data.base.fyps[0];
-  const t1=allTags().find(t=>!p.domain_tags.includes(t)),t2=allTags().find(t=>!f.domain_tags.includes(t));
-  if(p&&t1){const c=mk('prof_tag',{slug:p.slug,tag:t1},op);c.title='[Demo sample] '+c.title;s.changes.push(c)}
-  if(f&&t2){const c=mk('fyp_tag',{id:f.id,tag:t2},op,'pending_chairman');c.title='[Demo sample] '+c.title;c.log.push({at:Date.now()-36e5,who:'Data Operator',a:'Submitted for approval'});s.changes.push(c)}
-  return s}
+  const op='operator.demo@neduet.edu.pk',ch='chairman.demo@neduet.edu.pk',vc='vc.demo@neduet.edu.pk';
+  const p1=Data.base.profs[0],p2=Data.base.profs[1],f1=Data.base.fyps[0],f2=Data.base.fyps[1];
+  
+  // 1. Pending Approvals Queue (for Chairman & VC)
+  if(p1){
+    const c1=mk('prof_tag',{slug:p1.slug,tag:'computer-vision'},op,'pending_chairman');
+    c1.title='[Demo] Add topic "Computer Vision" to '+p1.name;
+    c1.log.push({at:Date.now()-72e5,who:'Data Operator',a:'Submitted for Chairman approval'});
+    s.changes.push(c1);
+  }
+  if(f1){
+    const c2=mk('fyp_tag',{id:f1.id,tag:'ai-ml'},op,'pending_chairman');
+    c2.title='[Demo] Tag FYP "'+(f1.title||'').slice(0,35)+'..." with AI & ML';
+    c2.log.push({at:Date.now()-36e5,who:'Data Operator',a:'Submitted for approval'});
+    s.changes.push(c2);
+  }
+  const c3=mk('prereq_add',{from:'CS-218',to:'CS-433'},op,'pending_vc');
+  c3.title='[Demo Escalation] Add prerequisite CS-218 → CS-433';
+  c3.log.push({at:Date.now()-108e5,who:'Data Operator',a:'Drafted'});
+  c3.log.push({at:Date.now()-54e5,who:'Chairman CISE',a:'Endorsed & escalated to Vice Chancellor'});
+  s.changes.push(c3);
+
+  // 2. Drafts (for Operator)
+  if(p2){
+    const c4=mk('prof_tag',{slug:p2.slug,tag:'nlp'},op,'draft');
+    c4.title='[Demo Draft] Add "Natural Language Processing" to '+p2.name;
+    s.changes.push(c4);
+  }
+
+  // 3. Historical Releases (live)
+  s.releases.push({
+    id:'REL-2026-003-7B1A',changeId:'CIS-2026-A109',title:'Published Scheme of Studies 2026 updates',module:'Curriculum',type:'scheme_publish',payload:{name:'Scheme 2026 Revision'},at:Date.now()-864e5*2,by:'Vice Chancellor',status:'live'
+  });
+  s.releases.push({
+    id:'REL-2026-002-3C4D',changeId:'CIS-2026-88F2',title:'Link MT-335 to Data Science track',module:'Career',type:'career_course',payload:{slug:'data-science',code:'MT-335'},at:Date.now()-864e5*4,by:'Chairman CISE',status:'live'
+  });
+  s.releases.push({
+    id:'REL-2026-001-1E9F',changeId:'CIS-2026-55D1',title:'Verified prerequisite CS-115 → CS-218',module:'Curriculum',type:'prereq_add',payload:{from:'CS-115',to:'CS-218'},at:Date.now()-864e5*7,by:'Chairman CISE',status:'live'
+  });
+
+  // 4. Audit Log
+  s.audit.push({at:Date.now()-36e5,email:op,role:'operator',action:'SUBMIT_CHANGE',detail:'Submitted FYP domain tag for chairman sign-off'});
+  s.audit.push({at:Date.now()-54e5,email:ch,role:'chairman',action:'ESCALATE_CHANGE',detail:'Escalated prerequisite addition CS-218 -> CS-433 to Vice Chancellor'});
+  s.audit.push({at:Date.now()-864e5*2,email:vc,role:'vc',action:'PUBLISH_RELEASE',detail:'Signed off REL-2026-003 Scheme 2026 updates'});
+
+  // 5. Security & Login Events
+  s.events.push({at:Date.now()-18e5,email:op,event:'LOGIN_SUCCESS'});
+  s.events.push({at:Date.now()-54e5,email:ch,event:'LOGIN_SUCCESS'});
+  s.events.push({at:Date.now()-864e5,email:vc,event:'LOGIN_SUCCESS'});
+
+  // 6. Curriculum Schemes
+  s.schemes.push({id:'SCH-2022',name:'Scheme of Studies 2022 (Current Live)',status:'active',credits:136,batches:['2022','2023','2024','2025']});
+  s.schemes.push({id:'SCH-2026',name:'Scheme of Studies 2026 (Under Revision)',status:'draft',credits:134,batches:['2026+']});
+
+  return s;
+}
 const st=()=>{let s=store.get('adm',null);if(!s){s=seed();store.set('adm',s)}return s};
 const save=s=>store.set('adm',s);
 const nowE=s=>Date.now()+s.clock*DAY;
@@ -212,7 +263,7 @@ const cntFor=me=>counts(me,st());
 window.AdminNav={
  menu(){const me=sess(),R=me&&ROLES[me.role];
   const head=`<button class="btn btn-sm btn-line admbtn" id="admbtn" aria-haspopup="true" aria-expanded="false">${ic('shield')} Admin ${ic('chev')}</button>`;
-  if(!me)return `<div class="dd">${head}<div class="ddmenu" id="admmenu" role="menu" hidden><div class="ddh"><b>Admin panel</b><small>Staff only. Sign in to continue.</small></div><button role="menuitem" data-admtab="">${ic('lock')} Admin sign-in</button></div></div>`;
+  if(!me)return '';
   const n=cntFor(me);
   return `<div class="dd">${head}<div class="ddmenu" id="admmenu" role="menu" hidden><div class="ddh"><b>${esc(me.name)}</b><small>${esc(me.email)}</small></div>${R.tabs.map(t=>`<button role="menuitem" data-admtab="${t[0]}"><span>${t[1]}</span>${n[t[0]]?`<i class="cnt">${n[t[0]]}</i>`:''}</button>`).join('')}<hr><button role="menuitem" data-admact="reset">${ic('clock')} Reset demo data</button><button role="menuitem" data-admact="logout">${ic('out')} Sign out of admin</button></div></div>`},
  pick(tab){if(tab)Adm.tab=tab;Adm.val=null;if(location.hash.split('?')[0]==='#/admin')render();else go('/admin')},
